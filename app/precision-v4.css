@@ -1,0 +1,67 @@
+/* 冒頭の希望訴求を、端正な横長ビジュアルとして見せる */
+.hero .heroImage.hopeImage {
+  width: calc(100% - 40px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.hero .hopeImage .imageShade {
+  background: linear-gradient(180deg, transparent 28%, #2a19254a 56%, #24151ed9 100%);
+}
+
+.hero .hopeImage .imageMessage {
+  bottom: 21px;
+  padding: 0 16px;
+  color: #fff;
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: 600;
+  line-height: 1.8;
+  text-shadow: 0 2px 5px #1c1017, 0 0 18px #1c1017;
+}
+
+.hero .hopeImage .imageMessage strong {
+  color: #ffe7c5;
+  font-size: clamp(18px, 4.9vw, 25px);
+  font-weight: 600;
+}
+
+/* 共感写真は見出しの文字幅に揃え、中央へコンパクトに配置する */
+.section.empathy .painList {
+  width: 88%;
+  max-width: 540px;
+  margin: 34px auto 0;
+}
+
+.section.empathy .painCard,
+.section.empathy .painPhoto {
+  width: 100%;
+}
+
+.section.empathy .painPhoto {
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+@media (max-width: 420px) {
+  .hero .heroImage.hopeImage {
+    width: calc(100% - 32px);
+  }
+
+  .section.empathy .painList {
+    width: 86%;
+    gap: 20px;
+  }
+
+  .section.empathy .painCard .painPhoto p {
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
