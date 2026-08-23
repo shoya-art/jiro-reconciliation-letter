@@ -37,7 +37,7 @@ export default function Home() {
       <div className="futureLine"><p>「あの時、諦めなくてよかった」</p><strong>そう思える未来は、<br />「今」ここから始まります。</strong></div>
     </section>
 
-    <section className="section proof"><div className="sectionHeading"><span>RECONCILIATION STORIES</span><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p>6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><div className="proofGrid">{[1,2,3,4,5].map(n=><div className="proofPlaceholder" key={n}><span>実績 {n}</span><small>画像をここに掲載</small></div>)}</div><p className="replacementNote">※お預かりする実績画像に差し替えます</p></section>
+    <section className="section proof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><div className="proofGrid">{[1,2,3,4,5].map(n=><div className="proofPlaceholder" key={n}><span>実績 {n}</span><small>画像をここに掲載</small></div>)}</div><p className="replacementNote">※お預かりする実績画像に差し替えます</p></section>
 
     <section className="section empathy"><div className="sectionHeading"><span>心の奥にある、本当の気持ち</span><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="painList">{painCards.map(([src,copy,alt])=><article className="painCard" key={src}><div className="painPhoto"><Image src={src} alt={alt} fill sizes="(max-width:720px) 100vw,720px"/></div><p>{copy.split("\n").map((line,index)=><span key={line}>{line}{index===0&&<br/>}</span>)}</p></article>)}</div><blockquote>「戻れるなら、<br /><em>もう一度戻りたい」</em></blockquote><p>もし、今のあなたがこんな感じなら、<br />絶対に知ってほしいことがあります。</p></section>
 
@@ -51,7 +51,7 @@ export default function Home() {
 
     <section className="photoStory"><Image src="/images/healing-light.png" alt="朝の光の中で穏やかな表情を取り戻す女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="photoStoryCopy"><p>心だけじゃなく、<br />魂にまで残った傷を癒す。</p><h2>傷ついたあなたではなく、<br /><em>本来のあなた</em>として<br />彼と向き合うために。</h2></div></section>
 
-    <section className="section soul"><div className="sectionHeading"><span>THE WOUNDS WITHIN</span><h2>魂の濁りは、彼との別れだけで<br />できたものじゃない</h2></div><ul className="woundList"><li>昔の彼に浮気された</li><li>好きだった人に突然フラれた</li><li>小さい頃から誰かと比べられてきた</li><li>大切だった人に離れられた</li></ul><p>そんな小さな傷が、魂に少しずつ残っていく。<br /><br />返信が遅いだけで不安になったり、他の女性が気になったり、我慢した気持ちを最後にぶつけてしまったり。</p><div className="reassurance"><p>同じことを繰り返してしまうのは、<br /><strong>あなたが変われていないからではありません。</strong></p><p>昔できた傷が、癒えていないまま<br />魂の中に残っているからなんです。</p></div></section>
+    <section className="section soul"><div className="sectionHeading"><h2>魂の濁りは、彼との別れだけで<br />できたものじゃない</h2></div><ul className="woundList"><li>昔の彼に浮気された</li><li>好きだった人に突然フラれた</li><li>小さい頃から誰かと比べられてきた</li><li>大切だった人に離れられた</li></ul><p>そんな小さな傷が、魂に少しずつ残っていく。<br /><br />返信が遅いだけで不安になったり、他の女性が気になったり、我慢した気持ちを最後にぶつけてしまったり。</p><div className="reassurance"><p>同じことを繰り返してしまうのは、<br /><strong>あなたが変われていないからではありません。</strong></p><p>昔できた傷が、癒えていないまま<br />魂の中に残っているからなんです。</p></div></section>
 
     <section className="mirrorStory"><div className="mirrorPhoto"><Image src="/images/inner-wounds.png" alt="鏡の中の自分と静かに向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/></div><div className="mirrorCopy"><span>責めるためではなく、癒すために。</span><h2>本当のあなたを、<br />傷ついたままにしない。</h2><p>過去の恋愛や経験から残った感覚に気づくことが、同じ苦しさを繰り返さない最初の一歩です。</p></div></section>
 
@@ -59,15 +59,15 @@ export default function Home() {
 
     <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたへ</p><h2>今回だけ、<br />特別に開催します。</h2><p>「私の魂には、どんな傷が残っているの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><span>あなたと彼のことを僕が直接見て</span><h2>無料<br /><em>特別個別相談</em></h2><p>今の二人に必要なことを<br />一緒に整理します。</p></div><CTA label="無料個別相談に参加する"/></section>
 
-    <section className="consultationVisual"><Image src="/images/online-consultation.png" alt="オンライン個別相談で気持ちを整理する女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="consultationVisualCopy"><span>一人で答えを出さなくて大丈夫です</span><h2>話すことで、<br />見えてくることがある。</h2><p>あなたと彼の状況を聞きながら、今の二人に必要なことを一緒に整理します。</p></div></section>
+    <section className="consultationVisual"><div className="consultationVisualPhoto"><Image src="/images/online-consultation.png" alt="オンライン個別相談で気持ちを整理する女性" fill sizes="(max-width:720px) calc(100vw - 40px),640px"/></div><div className="consultationVisualCopy"><span>一人で答えを出さなくて大丈夫です</span><h2>話すことで、<br />見えてくることがある。</h2><p>あなたと彼の状況を聞きながら、今の二人に必要なことを一緒に整理します。</p></div></section>
 
-    <section className="section consultation"><div className="sectionHeading"><span>WHAT WE WILL UNCOVER</span><h2>相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
+    <section className="section consultation"><div className="sectionHeading"><h2>相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
 
-    <section className="section proof secondProof"><div className="sectionHeading"><span>REAL STORIES</span><h2>実際の復縁実績</h2></div><div className="wideProof"><p>実績写真・LINEスクリーンショットを<br />ここに掲載します</p></div><div className="wideProof"><p>相談者さまの変化や<br />喜びの声をここに掲載します</p></div><CTA label="ジローに個別相談してみる"/></section>
+    <section className="section proof secondProof"><div className="sectionHeading"><h2>実際の復縁実績</h2></div><div className="wideProof"><p>実績写真・LINEスクリーンショットを<br />ここに掲載します</p></div><div className="wideProof"><p>相談者さまの変化や<br />喜びの声をここに掲載します</p></div><CTA label="ジローに個別相談してみる"/></section>
 
     <section className="section undecided"><p className="chapter">迷ったままでも大丈夫です</p><h2>100%「彼と戻りたい」と<br />思っていなくても大丈夫です。</h2><div className="checkList"><p>彼のことはまだ好きだけど、戻るのが正解か分からない</p><p>復縁できたら嬉しい。でも、また同じことを繰り返すのは嫌</p><p>もう少し頑張りたいけれど、諦めた方がいいのかとも思う</p><p>自分でも、彼への気持ちをうまく整理できない</p></div><p><strong>こんな状態のまま参加して大丈夫です。</strong><br /><br />「私は本当に彼と戻りたいの？」<br />そこから一緒に整理するための個別相談でもあります。</p></section>
 
-    <section className="section faq"><div className="sectionHeading"><span>QUESTIONS & ANSWERS</span><h2>個別相談についてのQ&A</h2></div>{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>Q</span>{q}</summary><div className="answer"><span>A</span><p>{a}</p></div></details>)}</section>
+    <section className="section faq"><div className="sectionHeading"><h2>個別相談についてのQ&A</h2></div>{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>Q</span>{q}</summary><div className="answer"><span>A</span><p>{a}</p></div></details>)}</section>
 
     <section className="futurePhoto"><Image src="/images/future-together.png" alt="将来の可能性をイメージした、光の中を歩く男女" fill sizes="(max-width:720px) 100vw,720px"/><div className="futureShade"/><div className="futureCopy"><p>もし今も彼のことを考えてしまうなら</p><h2>その気持ちに、<br />無理にフタをしなくていい。</h2></div></section>
 

@@ -1,0 +1,300 @@
+/* 画像とコピーの横幅・比率をスマートフォン基準で統一する最終調整 */
+.heroImage,
+.visualChapter,
+.editorialImage,
+.photoStory,
+.mirrorStory,
+.consultationVisual,
+.futurePhoto {
+  width: calc(100% - 40px);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroImage,
+.visualChapter,
+.photoStory,
+.futurePhoto {
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+}
+
+.heroImage {
+  margin-bottom: 0;
+}
+
+.heroImage img {
+  object-position: center 61%;
+}
+
+.imageMessage {
+  bottom: 18px;
+  padding: 0 14px;
+  font-size: clamp(13px, 3.7vw, 18px);
+  line-height: 1.75;
+}
+
+.imageMessage strong {
+  font-size: clamp(16px, 4.4vw, 21px);
+}
+
+.proofIntro {
+  margin: -12px auto 26px;
+  color: #796a72;
+  font-size: 12px !important;
+  line-height: 1.9;
+  text-align: center !important;
+}
+
+.proofGrid {
+  margin-top: 0;
+}
+
+.proofPlaceholder,
+.proofPlaceholder:first-child,
+.wideProof {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.painList {
+  gap: 24px;
+}
+
+.painCard {
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fffdf9;
+  box-shadow: 0 12px 32px #49374318;
+}
+
+.painPhoto {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.painCard p {
+  position: relative;
+  margin: 0;
+  padding: 18px 18px 20px;
+  border-top: 1px solid #d3b98555;
+  background: #fffdf9;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.visualChapter {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.visualChapterCopy {
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 10px 8px;
+}
+
+.visualChapterCopy span {
+  font-size: 9px;
+}
+
+.visualChapterCopy h2 {
+  margin: 5px 0;
+  font-size: clamp(16px, 4.8vw, 23px);
+  line-height: 1.45;
+}
+
+.visualChapterCopy p {
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.editorialImage {
+  padding: 0 0 58px;
+}
+
+.editorialPhoto,
+.mirrorPhoto,
+.consultationVisualPhoto {
+  position: relative;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+}
+
+.editorialPhoto {
+  margin: 0;
+}
+
+.editorialCaption,
+.mirrorCopy,
+.consultationVisualCopy {
+  position: relative;
+  inset: auto;
+  margin: 0;
+  padding: 24px 18px 26px;
+  border: 1px solid #c8aa7477;
+  border-top: 0;
+  border-radius: 0 0 14px 14px;
+  background: #fffaf3;
+  box-shadow: 0 14px 34px #49374316;
+}
+
+.editorialCaption h2,
+.mirrorCopy h2,
+.consultationVisualCopy h2 {
+  margin: 9px 0 12px;
+  font-size: clamp(21px, 5.8vw, 27px);
+  line-height: 1.55;
+}
+
+.editorialCaption p,
+.mirrorCopy p,
+.consultationVisualCopy p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.photoStoryCopy {
+  inset: auto 12px 12px;
+  padding: 13px 10px;
+}
+
+.photoStoryCopy p {
+  margin-bottom: 4px;
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.photoStoryCopy h2 {
+  font-size: clamp(15px, 4.2vw, 21px);
+  line-height: 1.45;
+}
+
+.mirrorStory {
+  display: block;
+  padding: 0;
+  background: transparent;
+}
+
+.mirrorPhoto img,
+.consultationVisualPhoto img {
+  object-fit: cover;
+}
+
+.consultationVisual {
+  height: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.consultationVisual::after {
+  display: none;
+}
+
+.consultationVisualPhoto img {
+  object-position: center 38%;
+}
+
+.consultationVisualCopy {
+  left: auto;
+  right: auto;
+  bottom: auto;
+  text-align: center;
+}
+
+.cta {
+  border: 2px solid #ffd98d;
+  background: linear-gradient(135deg, #ef887e 0%, #e7627f 52%, #bc4c82 100%);
+  box-shadow: 0 14px 34px #c94f7852, inset 0 1px 0 #ffffff70;
+  font-weight: 600;
+}
+
+.ctaWrap > p b {
+  color: #bd496e;
+}
+
+.formNote {
+  color: #9a717f;
+}
+
+.futureCopy {
+  left: 12px;
+  right: 12px;
+  bottom: 14px;
+}
+
+.futureCopy p {
+  margin: 0 0 4px;
+  font-size: 9px;
+}
+
+.futureCopy h2 {
+  margin: 0;
+  font-size: clamp(18px, 5vw, 26px);
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .heroImage,
+  .visualChapter,
+  .photoStory,
+  .futurePhoto {
+    height: auto !important;
+  }
+
+  .painPhoto {
+    height: auto;
+  }
+
+  .visualChapter {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mirrorStory {
+    display: block;
+    padding: 0;
+  }
+
+  .mirrorPhoto {
+    height: auto;
+  }
+
+  .consultationVisual {
+    height: auto;
+  }
+
+  .consultationVisualCopy {
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroImage,
+  .visualChapter,
+  .editorialImage,
+  .photoStory,
+  .mirrorStory,
+  .consultationVisual,
+  .futurePhoto {
+    width: calc(100% - 32px);
+  }
+
+  .cta {
+    padding: 18px 12px;
+    font-size: 18px;
+  }
+}
