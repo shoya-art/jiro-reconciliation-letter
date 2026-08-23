@@ -18,6 +18,13 @@ const faqs = [
   ["昔このLINEを追加した時とは、違う彼の相談でもいいですか？", "もちろん大丈夫です。前に悩んでいた彼でなくても、その後に付き合った彼でも、最近別れた彼でも問題ありません。今あなたの頭から離れない彼のことを聞かせてください。"],
 ];
 
+const painCards = [
+  ["/images/pain-morning.png", "朝起きて、LINEの通知が\n来ていないのを見て気持ちが落ちる。", "朝、通知を確認して落ち込む女性"],
+  ["/images/pain-commute.png", "仕事中は普通に過ごしているのに、\n帰宅途中にふと彼を思い出す。", "帰宅途中に彼を思い出す女性"],
+  ["/images/pain-memories.png", "彼との昔のLINEを遡って、\n「あの時は幸せだったな」と過去の自分を後悔する。", "昔のLINEと写真を見返す女性"],
+  ["/images/night-checking.png", "彼がSNSを更新していると、\n知らない女性が写っていないか確認してしまう。", "夜に彼のSNSが気になってしまう女性"],
+];
+
 function CTA({ label = "無料個別相談に申し込む" }: { label?: string }) {
   return <div className="ctaWrap"><p><b>限定15名</b><span>募集開始から3日間</span></p><a className="cta" href="#form-pending">{label}<small>1時間程度・日程は個別に調整します</small></a><span className="formNote">※申込フォームは準備中です</span></div>;
 }
@@ -26,17 +33,17 @@ export default function Home() {
   return <main>
     <section className="hero">
       <div className="heroCopy"><p className="eyebrow">大切な人との別れに悩むあなたへ</p><span className="ornament">✦</span><h1>別れたあとも、<br />なぜか彼のことが<br />頭から離れないあなたへ</h1><p className="heroLead">「もう忘れた方がいい」と思っているのに<br />なぜ彼は何度も頭に浮かぶのか？</p></div>
-      <div className="heroImage"><Image src="/images/hero-night.png" alt="夜、別れた彼を想う女性" fill priority sizes="(max-width:720px) 100vw,720px"/><div className="imageShade"/><p className="imageMessage">彼を想って苦しくなる毎日から、<br /><strong>また彼の隣で笑っている毎日へ。</strong></p></div>
+      <div className="heroImage hopeImage"><Image src="/images/future-together.png" alt="彼と再び笑い合える未来をイメージしたカップル" fill priority sizes="(max-width:720px) 100vw,720px"/><div className="imageShade"/><p className="imageMessage">彼を想って苦しくなる毎日から、<br /><strong>また彼の隣で笑っている毎日へ。</strong></p></div>
       <div className="futureLine"><p>「あの時、諦めなくてよかった」</p><strong>そう思える未来は、<br />「今」ここから始まります。</strong></div>
     </section>
 
-    <section className="section proof"><div className="sectionHeading"><span>RECONCILIATION STORIES</span><h2>ジローの復縁実績</h2></div><p>6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><div className="proofGrid">{[1,2,3,4,5].map(n=><div className="proofPlaceholder" key={n}><span>実績 {n}</span><small>画像をここに掲載</small></div>)}</div><p className="replacementNote">※お預かりする実績画像に差し替えます</p></section>
+    <section className="section proof"><div className="sectionHeading"><span>RECONCILIATION STORIES</span><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p>6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><div className="proofGrid">{[1,2,3,4,5].map(n=><div className="proofPlaceholder" key={n}><span>実績 {n}</span><small>画像をここに掲載</small></div>)}</div><p className="replacementNote">※お預かりする実績画像に差し替えます</p></section>
 
-    <section className="section empathy"><div className="sectionHeading"><span>心の奥にある、本当の気持ち</span><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="emotionCard"><p>朝起きて、LINEの通知が<br />来ていないのを見て気持ちが落ちる。</p><i/><p>仕事中は普通に過ごしているのに、<br />帰り道にふと彼を思い出す。</p><i/><p>昔のLINEを遡って、<br />「あの時は幸せだったな」と後悔する。</p><i/><p>彼がSNSを更新していると、<br />知らない女性がいないか確認してしまう。</p></div><blockquote>「戻れるなら、<br /><em>もう一度戻りたい」</em></blockquote><p>もし、今のあなたがこんな感じなら、<br />絶対に知ってほしいことがあります。</p></section>
+    <section className="section empathy"><div className="sectionHeading"><span>心の奥にある、本当の気持ち</span><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="painList">{painCards.map(([src,copy,alt])=><article className="painCard" key={src}><div className="painPhoto"><Image src={src} alt={alt} fill sizes="(max-width:720px) 100vw,720px"/></div><p>{copy.split("\n").map((line,index)=><span key={line}>{line}{index===0&&<br/>}</span>)}</p></article>)}</div><blockquote>「戻れるなら、<br /><em>もう一度戻りたい」</em></blockquote><p>もし、今のあなたがこんな感じなら、<br />絶対に知ってほしいことがあります。</p></section>
 
     <section className="visualChapter visualNight"><Image src="/images/night-checking.png" alt="夜、彼のSNSが気になりスマートフォンを見つめる女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="visualShade"/><div className="visualChapterCopy"><span>ふとした瞬間、また彼を探してしまう</span><h2>新しい女性ができていたら、<br />どうしよう。</h2><p>前を向きたいのに、心だけが<br />あの日から動けないまま。</p></div></section>
 
-    <section className="section cause"><p className="chapter">知識を増やしても、苦しさが消えない理由</p><h2>あなたが今でも彼を<br />思い出してしまう原因</h2><div className="searchWords"><span>冷却期間</span><span>男性心理</span><span>自分磨き</span><span>LINEの送り方</span></div><p>InstagramもYouTubeも見た。<br />ネットでも復縁についてたくさん調べた。</p><h3>「で、私は何をしたらいいんだろう？」</h3><p>知識は増えたのに、彼のことになると答えが出ない。<br /><br />それでも苦しさが消えないのは、あなたの中に<br /><strong>「私は最後には愛されなくなる」</strong><br />という感覚が残ったままだからです。</p></section>
+    <section className="section cause"><p className="chapter">知識を増やしても、苦しさが消えない理由</p><h2>あなたが今でも彼を<br />思い出してしまう原因</h2><p>InstagramもYouTubeも見た。<br />ネットでも復縁についてたくさん調べた。</p><h3>「で、私は何をしたらいいんだろう？」</h3><p>知識は増えたのに、彼のことになると答えが出ない。<br /><br />それでも苦しさが消えないのは、あなたの中に<br /><strong>「私は最後には愛されなくなる」</strong><br />という感覚が残ったままだからです。</p></section>
 
     <section className="editorialImage"><div className="editorialPhoto"><Image src="/images/searching-answers.png" alt="復縁について調べても自分の答えが見つからず考え込む女性" fill sizes="(max-width:720px) 100vw,720px"/></div><div className="editorialCaption"><span>調べても、学んでも</span><h2>「私と彼の場合」が<br />分からない。</h2><p>必要なのは、知識をもう一つ増やすことではなく、あなた自身に残った痛みを見ることでした。</p></div></section>
 
