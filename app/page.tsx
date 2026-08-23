@@ -34,7 +34,11 @@ export default function Home() {
 
     <section className="section empathy"><div className="sectionHeading"><span>心の奥にある、本当の気持ち</span><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="emotionCard"><p>朝起きて、LINEの通知が<br />来ていないのを見て気持ちが落ちる。</p><i/><p>仕事中は普通に過ごしているのに、<br />帰り道にふと彼を思い出す。</p><i/><p>昔のLINEを遡って、<br />「あの時は幸せだったな」と後悔する。</p><i/><p>彼がSNSを更新していると、<br />知らない女性がいないか確認してしまう。</p></div><blockquote>「戻れるなら、<br /><em>もう一度戻りたい」</em></blockquote><p>もし、今のあなたがこんな感じなら、<br />絶対に知ってほしいことがあります。</p></section>
 
+    <section className="visualChapter visualNight"><Image src="/images/night-checking.png" alt="夜、彼のSNSが気になりスマートフォンを見つめる女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="visualShade"/><div className="visualChapterCopy"><span>ふとした瞬間、また彼を探してしまう</span><h2>新しい女性ができていたら、<br />どうしよう。</h2><p>前を向きたいのに、心だけが<br />あの日から動けないまま。</p></div></section>
+
     <section className="section cause"><p className="chapter">知識を増やしても、苦しさが消えない理由</p><h2>あなたが今でも彼を<br />思い出してしまう原因</h2><div className="searchWords"><span>冷却期間</span><span>男性心理</span><span>自分磨き</span><span>LINEの送り方</span></div><p>InstagramもYouTubeも見た。<br />ネットでも復縁についてたくさん調べた。</p><h3>「で、私は何をしたらいいんだろう？」</h3><p>知識は増えたのに、彼のことになると答えが出ない。<br /><br />それでも苦しさが消えないのは、あなたの中に<br /><strong>「私は最後には愛されなくなる」</strong><br />という感覚が残ったままだからです。</p></section>
+
+    <section className="editorialImage"><div className="editorialPhoto"><Image src="/images/searching-answers.png" alt="復縁について調べても自分の答えが見つからず考え込む女性" fill sizes="(max-width:720px) 100vw,720px"/></div><div className="editorialCaption"><span>調べても、学んでも</span><h2>「私と彼の場合」が<br />分からない。</h2><p>必要なのは、知識をもう一つ増やすことではなく、あなた自身に残った痛みを見ることでした。</p></div></section>
 
     <section className="section purification"><div className="lightOrb"/><p className="chapter">あなたが悪いわけではありません</p><h2>必要なのは、さらに<br />復縁の知識を増やすことではありません</h2><p>彼を失ったときに残った痛みや不安を手放して、<br />本来のあなたに戻していくこと。</p><div className="purificationCard"><span className="goldLine"/><h3>それが、僕の言う<br /><em>「浄化」</em>なんです。</h3></div></section>
 
@@ -42,9 +46,13 @@ export default function Home() {
 
     <section className="section soul"><div className="sectionHeading"><span>THE WOUNDS WITHIN</span><h2>魂の濁りは、彼との別れだけで<br />できたものじゃない</h2></div><ul className="woundList"><li>昔の彼に浮気された</li><li>好きだった人に突然フラれた</li><li>小さい頃から誰かと比べられてきた</li><li>大切だった人に離れられた</li></ul><p>そんな小さな傷が、魂に少しずつ残っていく。<br /><br />返信が遅いだけで不安になったり、他の女性が気になったり、我慢した気持ちを最後にぶつけてしまったり。</p><div className="reassurance"><p>同じことを繰り返してしまうのは、<br /><strong>あなたが変われていないからではありません。</strong></p><p>昔できた傷が、癒えていないまま<br />魂の中に残っているからなんです。</p></div></section>
 
+    <section className="mirrorStory"><div className="mirrorPhoto"><Image src="/images/inner-wounds.png" alt="鏡の中の自分と静かに向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/></div><div className="mirrorCopy"><span>責めるためではなく、癒すために。</span><h2>本当のあなたを、<br />傷ついたままにしない。</h2><p>過去の恋愛や経験から残った感覚に気づくことが、同じ苦しさを繰り返さない最初の一歩です。</p></div></section>
+
     <section className="section experience"><p className="chapter">6,000件以上の復縁相談を受けて</p><h2>「魂の傷」は<br />一人ずつ違いました</h2><div className="bigNumber">6,000<small>件以上</small></div><p>本当に一人として、同じ恋愛はしていませんでした。</p><div className="voices"><p>「返信が来なくて不安になり、何通もLINEしてしまった」</p><p>「元カノと自分を比べて、好きと言われても信じられなかった」</p><p>「嫌われたくなくて我慢して、最後に全部ぶつけてしまった」</p></div><p>全員に同じ方法を当てはめても、<br />その人の魂の傷までは癒せません。</p><h3>まず知るべきなのは、<br />あなたと彼の間で何が起きて、<br />魂のどこに傷が残ったのか。</h3></section>
 
     <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたへ</p><h2>今回だけ、<br />特別に開催します。</h2><p>「私の魂には、どんな傷が残っているの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><span>あなたと彼のことを僕が直接見て</span><h2>無料<br /><em>特別個別相談</em></h2><p>今の二人に必要なことを<br />一緒に整理します。</p></div><CTA label="無料個別相談に参加する"/></section>
+
+    <section className="consultationVisual"><Image src="/images/online-consultation.png" alt="オンライン個別相談で気持ちを整理する女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="consultationVisualCopy"><span>一人で答えを出さなくて大丈夫です</span><h2>話すことで、<br />見えてくることがある。</h2><p>あなたと彼の状況を聞きながら、今の二人に必要なことを一緒に整理します。</p></div></section>
 
     <section className="section consultation"><div className="sectionHeading"><span>WHAT WE WILL UNCOVER</span><h2>相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
 
