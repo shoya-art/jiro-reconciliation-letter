@@ -26,6 +26,7 @@ if (!main || !cssLiteral) {
 
 const staticMain = main
   .replaceAll(/\/_next\/image\?url=%2Fimages%2F([^&"]+)&amp;w=\d+&amp;q=\d+/g, "./images/$1")
+  .replaceAll("%2F", "/")
   .replaceAll("<!-- -->", "");
 
 const document = `<!doctype html>

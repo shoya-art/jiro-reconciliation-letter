@@ -25,6 +25,21 @@ const painCards = [
   ["/images/pain-social-night.png", "彼がSNSを更新していると、\n知らない女性が写っていないか確認してしまう。", "夜に彼のSNSが気になってしまう女性"],
 ];
 
+const resultVoices = [
+  ["/images/results/voice-01.jpg", 1047, 845],
+  ["/images/results/voice-02.jpg", 1052, 844],
+  ["/images/results/voice-03.jpg", 1070, 520],
+  ["/images/results/voice-04.jpg", 1066, 793],
+  ["/images/results/voice-05.jpg", 1007, 759],
+  ["/images/results/voice-06.jpg", 1043, 824],
+  ["/images/results/voice-07.jpg", 1046, 1249],
+  ["/images/results/voice-08.jpg", 1034, 856],
+] as const;
+
+function ResultGallery({ from, to }: { from: number; to: number }) {
+  return <div className="resultGallery">{resultVoices.slice(from - 1, to).map(([src,width,height],index)=><figure className="resultVoice" key={src}><Image src={src} alt={`復縁実績者の声 ${from + index}`} width={width} height={height} sizes="(max-width:720px) calc(100vw - 40px),640px" /></figure>)}</div>;
+}
+
 function CTA({ label = "無料個別相談で、復縁への一歩を進める" }: { label?: string }) {
   return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href="#form-pending">{label}<small>1時間程度・日程は個別に調整します</small></a></div>;
 }
@@ -37,11 +52,11 @@ export default function Home() {
       <div className="futureLine"><p>「あの時、諦めなくてよかった」</p><strong>そう思える未来は、<br />「今」ここから始まります。</strong></div>
     </section>
 
-    <section className="section proof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><div className="proofGrid">{[1,2,3,4,5].map(n=><div className="proofPlaceholder" key={n}><span>実績 {n}</span><small>画像をここに掲載</small></div>)}</div><p className="replacementNote">※お預かりする実績画像に差し替えます</p></section>
+    <section className="section proof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><ResultGallery from={1} to={4}/></section>
 
     <section className="section empathy"><div className="sectionHeading"><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="painList">{painCards.map(([src,copy,alt])=><article className="painCard" key={src}><div className="painPhoto"><Image src={src} alt={alt} fill sizes="(max-width:720px) 100vw,720px"/><div className="painShade"/><p>{copy.split("\n").map((line,index)=><span key={line}>{line}{index===0&&<br/>}</span>)}</p></div></article>)}</div><div className="desireCallout"><span>戻れるなら、</span><h2>もう一度戻りたい。</h2><p>今のあなたがこんな気持ちなら、<br /><strong>絶対に知ってほしいことがあります。</strong></p></div></section>
 
-    <section className="section cause"><p className="chapter">知識を増やしても、苦しさが消えない理由</p><h2>あなたが今でも彼を<br />思い出してしまう原因</h2><p>InstagramもYouTubeも見た。<br />ネットでも復縁についてたくさん調べた。</p><h3>「で、私は何をしたらいいんだろう？」</h3><p>知識は増えたのに、彼のことになると答えが出ない。</p><div className="fearVisual"><Image src="/images/fear-unloved-v2.png" alt="最後には愛されなくなるという不安を抱える女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="fearShade"/><div className="fearCopy"><p>それでも苦しさが消えないのは、<br />あなたの中に</p><h2>「私は最後には<br />愛されなくなる」</h2><strong>という感覚が残ったままだからです。</strong></div></div></section>
+    <section className="section cause"><p className="chapter">知識を増やしても、苦しさが消えない理由</p><h2>あなたが今でも彼を<br />思い出してしまう原因</h2><div className="causeLead"><p>InstagramもYouTubeも見た。<br />ネットでも復縁についてたくさん調べた。</p><p className="causeQuestion">「で、私は何をしたらいいんだろう？」</p><p>知識は増えたのに、彼のことになると答えが出ない。</p></div><div className="fearVisual fearVisualBright"><Image src="/images/fear-unloved-bright-v3.png" alt="明るい部屋で、恋愛への不安と落ち着いて向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="fearShade"/><div className="fearCopy"><p>それでも苦しさが消えないのは、<br />あなたの中に</p><h2>「私は最後には<br />愛されなくなる」</h2><strong>という感覚が残ったままだからです。</strong></div></div></section>
 
     <section className="answerCallout"><span>調べても、学んでも</span><h2>「私と彼の場合」が<br />分からない。</h2><p>必要なのは、知識をもう一つ増やすことではなく、<br />あなた自身に残った痛みを見ることでした。</p></section>
 
@@ -55,7 +70,7 @@ export default function Home() {
 
     <section className="section consultation"><div className="sectionHeading"><h2>個別相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
 
-    <section className="section proof secondProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">一人で悩み続けることをやめて、<br />自分の恋愛と向き合った方々の記録です。</p><div className="wideProof"><p>実績写真・LINEスクリーンショットを<br />ここに掲載します</p></div><div className="wideProof"><p>相談者さまの変化や<br />喜びの声をここに掲載します</p></div><CTA label="ジローに個別相談してみる"/></section>
+    <section className="section proof secondProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">一人で悩み続けることをやめて、<br />自分の恋愛と向き合った方々の記録です。</p><ResultGallery from={5} to={8}/><CTA label="ジローに個別相談してみる"/></section>
 
     <section className="section undecided"><p className="chapter">迷ったままでも大丈夫です</p><div className="undecidedVisual"><Image src="/images/undecided-reflection-v2.png" alt="彼への気持ちをまだ決め切れず、穏やかに自分の心と向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="undecidedShade"/><h2>100%「彼と戻りたい」と<br />思っていなくても大丈夫です。</h2></div><div className="checkList"><p>彼のことはまだ好きだけど、戻るのが正解か分からない</p><p>復縁できたら嬉しい。でも、また同じことを繰り返すのは嫌</p><p>もう少し頑張りたいけれど、諦めた方がいいのかとも思う</p><p>自分でも、彼への気持ちをうまく整理できない</p></div><p><strong>こんな状態のまま参加して大丈夫です。</strong><br /><br />「私は本当に彼と戻りたいの？」<br />そこから一緒に整理するための個別相談でもあります。</p></section>
 

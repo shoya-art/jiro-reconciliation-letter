@@ -74,6 +74,28 @@ main .proofIntro {
   text-align: center;
 }
 
+main .resultGallery {
+  display: grid;
+  gap: 20px;
+  width: min(100%, 620px);
+  margin: 28px auto 0;
+}
+
+main .resultVoice {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #e6bcbc;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 22px #8b66661c;
+}
+
+main .resultVoice img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 main .empathy {
   background: #fff;
 }
@@ -147,10 +169,30 @@ main .cause > h2 {
   color: var(--calm-blue);
 }
 
-main .cause h3 {
+main .causeLead {
+  width: min(100%, 590px);
+  margin: 34px auto 0;
+  padding: 26px 22px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 7px 22px #52677b12;
+}
+
+main .causeLead p {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: clamp(13px, 2.7vw, 15px);
+  line-height: 2;
+  text-align: left;
+}
+
+main .causeLead .causeQuestion {
+  margin: 18px 0;
   color: var(--calm-blue-dark);
-  border-color: #89a0b5;
-  font-size: clamp(18px, 3.6vw, 23px);
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(17px, 3.5vw, 21px);
+  line-height: 1.7;
+  text-align: center;
 }
 
 main .fearVisual,
@@ -159,6 +201,53 @@ main .undecidedVisual,
 main .finalHappyPhoto {
   border: 0;
   box-shadow: none;
+}
+
+main .fearVisualBright {
+  width: min(100%, 620px);
+  margin: 34px auto 0;
+  border-radius: 8px;
+}
+
+main .fearVisualBright img {
+  object-position: center center;
+}
+
+main .fearVisualBright .fearShade {
+  background: linear-gradient(90deg, #fffaf4f4 0%, #fffaf4e8 43%, #fffaf455 64%, transparent 78%);
+}
+
+main .fearVisualBright .fearCopy {
+  left: 22px;
+  width: 53%;
+  color: #5b6470;
+  text-shadow: none;
+}
+
+main .fearVisualBright .fearCopy p,
+main .fearVisualBright .fearCopy strong {
+  color: #5b6470;
+  font-size: clamp(9px, 2vw, 12px);
+}
+
+main .section .fearVisualBright .fearCopy h2 {
+  color: var(--soft-salmon-dark);
+  font-size: clamp(18px, 4.7vw, 27px);
+}
+
+@media (max-width: 520px) {
+  main .resultGallery {
+    gap: 16px;
+  }
+
+  main .causeLead {
+    padding: 23px 18px;
+  }
+
+  main .fearVisualBright .fearCopy {
+    left: 14px;
+    width: 56%;
+  }
 }
 
 main .purification {
