@@ -2791,6 +2791,13 @@ main .offer > h2 {
   color: var(--soft-salmon-dark);
   border-color: #d8a3a4;
 }
+main .offerHero .offerMessage {
+  margin: 0;
+  color: var(--soft-salmon-dark);
+  font-size: clamp(22px, 4.5vw, 31px);
+  line-height: 1.85;
+  font-weight: 500;
+}
 main .consultationVisualCopy h2 {
   font-size: clamp(22px, 4.1vw, 29px);
 }
@@ -2811,6 +2818,9 @@ main .ctaWrap .cta::after {
 }
 main .undecided {
   background: var(--mist-pink);
+}
+main .undecidedVisual img {
+  object-position: center center;
 }
 main .finalQuote h2 {
   font-size: clamp(22px, 4.2vw, 29px);

@@ -26,7 +26,7 @@ const painCards = [
 ];
 
 function CTA({ label = "無料個別相談で、復縁への一歩を進める" }: { label?: string }) {
-  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href="#form-pending">{label}<small>1時間程度・日程は個別に調整します</small></a><span className="formNote">※申込フォームは準備中です</span></div>;
+  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href="#form-pending">{label}<small>1時間程度・日程は個別に調整します</small></a></div>;
 }
 
 export default function Home() {
@@ -51,20 +51,17 @@ export default function Home() {
 
     <section className="section experience"><h2>別れの原因も、繰り返す恋愛パターンも<br />一人ずつ違いました</h2><div className="bigNumber">6,000<small>件以上</small></div><p>本当に一人として、同じ恋愛はしていませんでした。</p><div className="voices"><p>「返信が来なくて不安になり、何通もLINEしてしまった」</p><p>「元カノと自分を比べて、好きと言われても信じられなかった」</p><p>「嫌われたくなくて我慢して、最後に全部ぶつけてしまった」</p></div><p>全員に同じ方法を当てはめても、<br />その人に必要な内面改善までは分かりません。</p><h3>まず知るべきなのは、<br />あなたと彼の間で何が起きて、<br />どんな考え方や行動を変える必要があるのか。</h3></section>
 
-    <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたのためへ</p><h2>今回だけ、<br />無料個別相談を開催します。</h2><p>「私は、何を変えたらいいの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><span>あなたと彼の状況を僕が直接聞いて</span><h2>無料<br /><em>特別個別相談</em></h2><p>今の二人に必要な内面改善と行動を<br />一緒に整理します。</p></div><CTA label="ジローと一緒に、復縁への一歩を進める"/></section>
-
-    <section className="consultationVisual"><div className="consultationVisualPhoto"><Image src="/images/online-consultation.png" alt="オンライン個別相談で気持ちを整理する女性" fill sizes="(max-width:720px) calc(100vw - 40px),640px"/><div className="consultationShade"/><div className="consultationVisualCopy"><span>一人で答えを出さなくて大丈夫です</span><h2>話すことで、<br />見えてくることがある。</h2><p>一人では見えなかった別れの原因も、彼の今の心理も、言葉にすることで整理されていきます。あなたと彼の状況を聞きながら、今の二人に必要なことを一緒に見つけます。</p></div></div></section>
+    <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたのためへ</p><h2>今回だけ、<br />無料で個別相談を開催します。</h2><p>「私は、何を変えたらいいの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><h2 className="offerMessage">あなたと彼の状況を僕が直接聞いて<br />今の二人に必要な内面改善と行動を<br />一緒に整理します。</h2></div><CTA label="ジローと一緒に、復縁への一歩を進める"/></section>
 
     <section className="section consultation"><div className="sectionHeading"><h2>個別相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
 
     <section className="section proof secondProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">一人で悩み続けることをやめて、<br />自分の恋愛と向き合った方々の記録です。</p><div className="wideProof"><p>実績写真・LINEスクリーンショットを<br />ここに掲載します</p></div><div className="wideProof"><p>相談者さまの変化や<br />喜びの声をここに掲載します</p></div><CTA label="ジローに個別相談してみる"/></section>
 
-    <section className="section undecided"><p className="chapter">迷ったままでも大丈夫です</p><div className="undecidedVisual"><Image src="/images/undecided-heart.png" alt="彼への気持ちをまだ決め切れず、穏やかに自分の心と向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="undecidedShade"/><h2>100%「彼と戻りたい」と<br />思っていなくても大丈夫です。</h2></div><div className="checkList"><p>彼のことはまだ好きだけど、戻るのが正解か分からない</p><p>復縁できたら嬉しい。でも、また同じことを繰り返すのは嫌</p><p>もう少し頑張りたいけれど、諦めた方がいいのかとも思う</p><p>自分でも、彼への気持ちをうまく整理できない</p></div><p><strong>こんな状態のまま参加して大丈夫です。</strong><br /><br />「私は本当に彼と戻りたいの？」<br />そこから一緒に整理するための個別相談でもあります。</p></section>
+    <section className="section undecided"><p className="chapter">迷ったままでも大丈夫です</p><div className="undecidedVisual"><Image src="/images/undecided-reflection-v2.png" alt="彼への気持ちをまだ決め切れず、穏やかに自分の心と向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="undecidedShade"/><h2>100%「彼と戻りたい」と<br />思っていなくても大丈夫です。</h2></div><div className="checkList"><p>彼のことはまだ好きだけど、戻るのが正解か分からない</p><p>復縁できたら嬉しい。でも、また同じことを繰り返すのは嫌</p><p>もう少し頑張りたいけれど、諦めた方がいいのかとも思う</p><p>自分でも、彼への気持ちをうまく整理できない</p></div><p><strong>こんな状態のまま参加して大丈夫です。</strong><br /><br />「私は本当に彼と戻りたいの？」<br />そこから一緒に整理するための個別相談でもあります。</p></section>
 
     <section className="section faq"><div className="sectionHeading"><h2>個別相談についてのQ&A</h2></div>{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>Q</span>{q}</summary><div className="answer"><span>A</span><p>{a}</p></div></details>)}</section>
 
     <section className="section finale"><p>彼ともう一度やり直したいなら、<br />そのために今できることを一緒に見つければいい。</p><p>まだ自分の気持ちが分からないなら、<br />無理に答えを決めなくても大丈夫です。</p><div className="finalQuote"><span>いつか、また彼の隣で笑いながら</span><h2>「あの時、諦めなくてよかった」</h2><p>そう思える未来を、<br />一緒に目指していきましょう。</p></div><div className="finalHappyPhoto"><Image src="/images/final-real-couple-v2.png" alt="同棲や結婚後の日常の中で自然に寄り添い笑うカップル" fill sizes="(max-width:720px) 100vw,720px"/></div><CTA label="ジローに個別相談してみる"/><p className="signature">復縁アドバイザー　ジロー</p></section>
 
-    <footer><p>本ページの写真は未来のイメージを表現したものです。<br />相談の結果や復縁を保証するものではありません。</p><small>© ジロー＠復縁アドバイザー</small></footer>
   </main>;
 }
