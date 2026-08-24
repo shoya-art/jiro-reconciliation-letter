@@ -132,6 +132,31 @@ main .resultVoice img {
   object-position: center !important;
 }
 
+/* 上段の実績も下段と同じく、元スクリーンショットの全高をそのまま表示する */
+main .firstProof .resultVoice {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  overflow: visible !important;
+}
+
+main .firstProof .resultVoice img {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+
 main .empathy {
   background: #fff;
 }

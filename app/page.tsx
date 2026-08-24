@@ -54,7 +54,7 @@ export default function Home() {
       <div className="futureLine"><p>「あの時、諦めなくてよかった」</p><strong>そう思える未来は、<br />「今」ここから始まります。</strong></div>
     </section>
 
-    <section className="section proof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><ResultGallery from={1} to={4}/></section>
+    <section className="section proof firstProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">6,000件以上の復縁相談を通して、<br />一人ひとり違う恋愛と向き合ってきました。</p><ResultGallery from={1} to={4}/></section>
 
     <section className="section empathy"><div className="sectionHeading"><h2>今のあなたは、<br />こんな気持ちじゃないですか？</h2></div><div className="painList">{painCards.map(([src,copy,alt])=><article className="painCard" key={src}><div className="painPhoto"><Image src={src} alt={alt} fill sizes="(max-width:720px) 100vw,720px"/><div className="painShade"/><p>{copy.split("\n").map((line,index)=><span key={line}>{line}{index===0&&<br/>}</span>)}</p></div></article>)}</div><div className="desireCallout"><span>戻れるなら、</span><h2>もう一度戻りたい。</h2><p>今のあなたがこんな気持ちなら、<br /><strong>絶対に知ってほしいことがあります。</strong></p></div></section>
 
