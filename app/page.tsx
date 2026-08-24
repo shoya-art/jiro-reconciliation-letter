@@ -36,12 +36,14 @@ const resultVoices = [
   ["/images/results/voice-08.jpg", 1034, 856],
 ] as const;
 
+const applicationUrl = "https://liff.line.me/2000155954-8QV6Ql2R?unique_key=UpH6ui&ts=1787586839";
+
 function ResultGallery({ from, to }: { from: number; to: number }) {
-  return <div className="resultGallery">{resultVoices.slice(from - 1, to).map(([src,width,height],index)=><figure className="resultVoice" key={src}><Image src={src} alt={`復縁実績者の声 ${from + index}`} width={width} height={height} sizes="(max-width:720px) calc(100vw - 40px),640px" /></figure>)}</div>;
+  return <div className="resultGallery">{resultVoices.slice(from - 1, to).map(([src,width,height],index)=><figure className="resultVoice" key={src}><img src={src} alt={`復縁実績者の声 ${from + index}`} width={width} height={height} loading="lazy" /></figure>)}</div>;
 }
 
 function CTA({ label = "無料個別相談で、復縁への一歩を進める" }: { label?: string }) {
-  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href="#form-pending">{label}<small>1時間程度・日程は個別に調整します</small></a></div>;
+  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href={applicationUrl}>{label}<small>1時間程度・日程は個別に調整します</small></a></div>;
 }
 
 export default function Home() {

@@ -11,8 +11,7 @@ body main {
 }
 
 main .hero {
-  background:
-    repeating-linear-gradient(115deg, #fff 0 12px, #fff8f8 12px 24px);
+  background: #fff8f7;
 }
 
 main .heroCopy {

@@ -2020,7 +2020,7 @@ body main {
   box-shadow: 0 0 28px #52545a18;
 }
 main .hero {
-  background: repeating-linear-gradient(115deg, #fff 0 12px, #fff8f8 12px 24px);
+  background: #fff8f7;
 }
 main .heroCopy {
   padding-bottom: 36px;
@@ -2487,6 +2487,32 @@ body main {
   background: #fff;
   color: var(--body-gray);
 }
+main .hero {
+  background: radial-gradient(circle at 15% 10%, #ffdfe8 0, #ffdfe800 31%),
+    radial-gradient(circle at 88% 14%, #fff0bd 0, #fff0bd00 28%),
+    linear-gradient(180deg, #fffdf8 0%, #fff3f4 54%, #fffaf1 100%);
+}
+main .heroCopy::before,
+main .heroCopy::after {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background: #fff9;
+  filter: blur(1px);
+  content: "";
+}
+main .heroCopy::before {
+  top: 28px;
+  left: 8%;
+  width: 68px;
+  height: 68px;
+}
+main .heroCopy::after {
+  right: 7%;
+  bottom: 16px;
+  width: 94px;
+  height: 94px;
+}
 main .hero h1 {
   font-size: clamp(27px, 5.5vw, 38px);
   line-height: 1.62;
@@ -2539,16 +2565,21 @@ main .resultGallery {
 }
 main .resultVoice {
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid #e6bcbc;
-  border-radius: 8px;
+  border-radius: 0;
   background: #fff;
   box-shadow: 0 8px 22px #8b66661c;
 }
 main .resultVoice img {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
 }
 main .empathy {
   background: #fff;
