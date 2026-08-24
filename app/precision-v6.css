@@ -1,0 +1,451 @@
+/* LP269/03 の静かな中央見出し、写真内コピー、青灰×サーモンの配色を反映 */
+:root {
+  --calm-blue: #5c7ea0;
+  --calm-blue-dark: #536f89;
+  --soft-salmon: #cf7474;
+  --soft-salmon-dark: #bd6466;
+  --mist-blue: #f1f4f7;
+  --mist-pink: #faeded;
+  --warm-cream: #fbf8f1;
+  --body-gray: #55585c;
+}
+
+html body {
+  background: #eceef0;
+  color: var(--body-gray);
+}
+
+body main {
+  background: #fff;
+  color: var(--body-gray);
+}
+
+/* ヘッダー構成と画像は維持し、タイトルだけ読みやすい大きさへ */
+main .hero h1 {
+  font-size: clamp(27px, 5.5vw, 38px);
+  line-height: 1.62;
+}
+
+main .section {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+main .section h2,
+main .sectionHeading h2,
+main .cause > h2,
+main .experience > h2,
+main .offer > h2 {
+  font-size: clamp(23px, 4.3vw, 30px);
+  line-height: 1.65;
+}
+
+main .sectionHeading,
+main .cause > h2,
+main .experience > h2,
+main .offer > h2 {
+  width: min(100%, 590px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .sectionHeading h2,
+main .cause > h2,
+main .experience > h2,
+main .offer > h2 {
+  padding: 16px 8px;
+  border-color: currentColor;
+}
+
+main .chapter {
+  color: var(--soft-salmon-dark);
+}
+
+main .section.proof {
+  background: var(--mist-pink);
+}
+
+main .proof .sectionHeading h2 {
+  color: var(--soft-salmon-dark);
+  border-color: #d8a3a4;
+}
+
+main .proofIntro {
+  text-align: center;
+}
+
+main .empathy {
+  background: #fff;
+}
+
+main .empathy .sectionHeading h2,
+main .consultation .sectionHeading h2,
+main .faq .sectionHeading h2 {
+  color: var(--calm-blue);
+  border-color: #89a0b5;
+}
+
+main .section.empathy .painList {
+  width: 78%;
+  gap: 26px;
+}
+
+main .section.empathy .painCard {
+  border: 0;
+  background: var(--mist-blue);
+  box-shadow: none;
+}
+
+main .section.empathy .painPhoto {
+  aspect-ratio: 16 / 9;
+}
+
+main .section.empathy .painPhoto::after {
+  position: absolute;
+  inset: 0;
+  background: #35516b50;
+  content: "";
+}
+
+main .section.empathy .painPhoto p {
+  z-index: 3;
+  top: 50%;
+  bottom: auto;
+  width: 90%;
+  padding: 0;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(14px, 3.1vw, 18px);
+  line-height: 1.8;
+  text-align: center;
+  text-shadow: 0 2px 8px #183046b8;
+  transform: translateY(-50%);
+}
+
+main .section .desireCallout,
+main .answerCallout {
+  background: var(--mist-blue);
+}
+
+main .section .desireCallout::before,
+main .answerCallout::before {
+  border-top-color: var(--mist-blue);
+}
+
+main .section .desireCallout h2,
+main .answerCallout h2 {
+  color: var(--soft-salmon-dark);
+  font-size: clamp(24px, 4.8vw, 32px);
+}
+
+main .cause,
+main .faq {
+  background: var(--mist-blue);
+}
+
+main .cause > h2 {
+  color: var(--calm-blue);
+}
+
+main .cause h3 {
+  color: var(--calm-blue-dark);
+  border-color: #89a0b5;
+  font-size: clamp(18px, 3.6vw, 23px);
+}
+
+main .fearVisual,
+main .purificationVisual,
+main .undecidedVisual,
+main .finalHappyPhoto {
+  border: 0;
+  box-shadow: none;
+}
+
+main .purification {
+  background: var(--mist-pink);
+}
+
+main .section .knowledgeHeading {
+  width: min(100%, 590px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 8px;
+  border-top: 1px solid #d8a3a4;
+  border-bottom: 1px solid #d8a3a4;
+  color: var(--soft-salmon-dark);
+  font-size: clamp(22px, 4.2vw, 29px);
+  text-align: center;
+}
+
+main .purification > p:not(.chapter) {
+  text-align: center;
+}
+
+main .purificationVisual {
+  width: 88%;
+  aspect-ratio: 16 / 9;
+  margin-top: 34px;
+  border-radius: 0;
+}
+
+main .purificationVisual img {
+  object-position: center 43%;
+}
+
+main .purificationShade {
+  background: #28445f8f;
+}
+
+main .purificationCopy {
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 9px #1f3445c7;
+  transform: translate(-50%, -50%);
+}
+
+main .purificationCopy p {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: clamp(11px, 2.5vw, 14px);
+  line-height: 1.7;
+}
+
+main .purificationCopy h3 {
+  display: inline-block;
+  margin: 0 0 13px;
+  padding: 2px 12px 4px;
+  background: #fffef4ee;
+  color: var(--soft-salmon-dark);
+  font-size: clamp(22px, 4.7vw, 31px);
+}
+
+main .section .purificationCopy h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(14px, 3.2vw, 19px);
+  line-height: 1.75;
+}
+
+main .purificationCopy em {
+  color: #ffe2df;
+}
+
+main .soul {
+  background: #fff;
+}
+
+main .soul .sectionHeading h2 {
+  color: var(--calm-blue);
+  border-color: #89a0b5;
+}
+
+main .patternFlow {
+  width: 88%;
+  margin: 4px auto 38px;
+}
+
+main .patternFlow article {
+  padding: 22px 18px;
+  border: 1px solid #d8dfe5;
+  background: var(--mist-blue);
+  text-align: center;
+}
+
+main .patternFlow article > small {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--calm-blue);
+  font-family: sans-serif;
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+
+main .patternFlow article h3 {
+  margin: 0 0 13px;
+  color: var(--calm-blue-dark);
+  font-size: clamp(18px, 3.7vw, 24px);
+  font-weight: 500;
+}
+
+main .patternFlow article p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+main .patternFlow > i {
+  display: block;
+  height: 36px;
+  color: var(--soft-salmon);
+  font-size: 25px;
+  font-style: normal;
+  line-height: 36px;
+  text-align: center;
+}
+
+main .experienceChips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+main .experienceChips span {
+  padding: 9px 5px;
+  background: #fff;
+  color: #626970;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+main .patternFlow .patternResult {
+  border-color: #d99b9d;
+  background: var(--mist-pink);
+}
+
+main .patternFlow .patternResult small,
+main .patternFlow .patternResult h3 {
+  color: var(--soft-salmon-dark);
+}
+
+main .patternResult p {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+}
+
+main .patternResult p b {
+  padding: 8px 10px;
+  background: #fff;
+  color: #765b5d;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+main .soul > p {
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .repetitionCallout {
+  padding: 32px 18px;
+  border: 0;
+  border-top: 1px solid #d99b9d;
+  border-bottom: 1px solid #d99b9d;
+}
+
+main .section .repetitionCallout h2 {
+  margin: 14px 0;
+  color: var(--soft-salmon-dark);
+  font-size: clamp(22px, 4.3vw, 29px);
+}
+
+main .repetitionCallout strong {
+  color: #65686c;
+}
+
+main .experience {
+  background: var(--calm-blue-dark);
+}
+
+main .experience > h2 {
+  font-size: clamp(22px, 4vw, 28px);
+}
+
+main .bigNumber {
+  font-size: clamp(52px, 10vw, 68px);
+}
+
+main .voices p {
+  position: relative;
+  margin: 13px 0;
+  box-shadow: 0 7px 16px #2437462b;
+}
+
+main .voices p::before {
+  position: absolute;
+  bottom: -10px;
+  left: 22px;
+  border-top: 11px solid #fff;
+  border-right: 12px solid transparent;
+  content: "";
+}
+
+main .offer {
+  background: var(--warm-cream);
+}
+
+main .offer > h2 {
+  color: var(--soft-salmon-dark);
+  border-color: #d8a3a4;
+}
+
+main .consultationVisualCopy h2 {
+  font-size: clamp(22px, 4.1vw, 29px);
+}
+
+main .ctaWrap .cta {
+  position: relative;
+  padding-right: 48px;
+  background: linear-gradient(180deg, #e9a1a1, #c76f72);
+  box-shadow: 0 5px 0 #989a9e, 0 10px 18px #5c5d6126;
+}
+
+main .ctaWrap .cta::after {
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  content: "›";
+  font-family: sans-serif;
+  font-size: 34px;
+  transform: translateY(-55%);
+}
+
+main .undecided {
+  background: var(--mist-pink);
+}
+
+main .finalQuote h2 {
+  font-size: clamp(22px, 4.2vw, 29px);
+}
+
+@media (max-width: 420px) {
+  main .hero h1 {
+    font-size: 27px;
+  }
+
+  main .section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  main .section h2,
+  main .sectionHeading h2,
+  main .cause > h2,
+  main .experience > h2,
+  main .offer > h2 {
+    font-size: 22px;
+  }
+
+  main .section.empathy .painList {
+    width: 84%;
+  }
+
+  main .purificationVisual,
+  main .patternFlow,
+  main .soul > p {
+    width: 92%;
+  }
+
+  main .section .purificationCopy h2 {
+    font-size: 13px;
+  }
+
+  main .patternResult p {
+    flex-wrap: wrap;
+  }
+}
