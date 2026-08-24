@@ -1,0 +1,552 @@
+/* 恋愛・内面改善LPへ寄せた、フラットで人の温度を感じるデザイン */
+html body {
+  background: #ecebed;
+  color: #606060;
+}
+
+body main {
+  background: #fffdfb;
+  color: #606060;
+  box-shadow: 0 0 28px #52545a18;
+}
+
+main .hero {
+  background:
+    repeating-linear-gradient(115deg, #fff 0 12px, #fff8f8 12px 24px);
+}
+
+main .heroCopy {
+  padding-bottom: 36px;
+}
+
+main .hero .eyebrow {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 9px 25px;
+  background: #ee8182;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 13px;
+  letter-spacing: .06em;
+  box-shadow: -12px 7px 0 #d96d71;
+}
+
+main .hero h1 {
+  color: #565656;
+  font-size: clamp(28px, 7vw, 46px);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+main .heroLead {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+main .hero .heroImage.hopeImage {
+  width: min(calc(100% - 40px), 620px);
+  border: 8px solid #fff;
+  box-shadow: 0 9px 22px #77777a2b;
+}
+
+main .hero .hopeImage .imageMessage {
+  bottom: 18px;
+  font-weight: 500;
+}
+
+main .futureLine {
+  padding: 40px 24px 48px;
+  background: #fff;
+  color: #606060;
+}
+
+main .futureLine p {
+  color: #e16f73;
+  font-weight: 600;
+}
+
+main .section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  color: #606060;
+}
+
+main .section h2,
+main .section h3 {
+  color: #565656;
+}
+
+main .sectionHeading h2,
+main .cause > h2,
+main .experience > h2,
+main .offer > h2,
+main .undecided .chapter + .undecidedVisual,
+main .faq .sectionHeading h2 {
+  position: relative;
+}
+
+main .sectionHeading h2,
+main .cause > h2,
+main .experience > h2,
+main .offer > h2 {
+  padding: 19px 10px;
+  border-top: 1px solid #98999d;
+  border-bottom: 1px solid #98999d;
+  font-weight: 600;
+}
+
+main .chapter {
+  color: #df7277;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+
+main .section.proof {
+  background: #fed1d1;
+}
+
+main .proof .sectionHeading h2 {
+  color: #565656;
+  border-color: #e08d90;
+}
+
+main .proofIntro {
+  color: #686868;
+}
+
+main .proofPlaceholder,
+main .proofPlaceholder:first-child,
+main .wideProof {
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  color: #777;
+  box-shadow: 0 5px 14px #8b66661f;
+}
+
+main .empathy {
+  background: #fff;
+}
+
+main .empathy .sectionHeading h2 {
+  border-color: #a0a1a4;
+}
+
+main .section.empathy .painList {
+  width: 86%;
+  gap: 23px;
+}
+
+main .section.empathy .painCard,
+main .section.empathy .painPhoto {
+  border-radius: 3px;
+}
+
+main .section.empathy .painCard {
+  border: 8px solid #fff;
+  box-shadow: 0 6px 18px #5e606526;
+}
+
+main .section .desireCallout,
+main .answerCallout {
+  border: 0;
+  border-radius: 4px;
+  background: #eaebe7;
+  color: #5d5d5d;
+  box-shadow: none;
+}
+
+main .section .desireCallout {
+  position: relative;
+  width: 86%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .section .desireCallout::before,
+main .answerCallout::before {
+  position: absolute;
+  bottom: -16px;
+  left: 22px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid #eaebe7;
+  border-right: 20px solid transparent;
+  content: "";
+}
+
+main .section .desireCallout h2,
+main .answerCallout h2 {
+  color: #e07176;
+}
+
+main .cause {
+  background: #f8f9f4;
+}
+
+main .cause h3,
+main .experience h3 {
+  border-color: #9b9ca0;
+  color: #575757;
+}
+
+main .fearVisual,
+main .purificationVisual,
+main .undecidedVisual,
+main .finalHappyPhoto {
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 8px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0 7px 18px #5e606523;
+}
+
+main .answerCallout {
+  position: relative;
+  width: min(calc(100% - 72px), 560px);
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+main .purification {
+  background: #fdeeee;
+}
+
+main .purification > p:not(.chapter) {
+  color: #606060;
+}
+
+main .purificationVisual {
+  margin-top: 36px;
+}
+
+main .purificationShade {
+  background: linear-gradient(90deg, #fffdfbd9 0%, #fffdfba8 44%, transparent 76%);
+}
+
+main .purificationCopy {
+  left: 16px;
+  width: 62%;
+  color: #555;
+  text-shadow: none;
+}
+
+main .purificationCopy p {
+  font-size: 10px;
+}
+
+main .purificationCopy h3 {
+  font-size: clamp(18px, 4.7vw, 28px);
+}
+
+main .section .purificationCopy h2 {
+  font-size: clamp(13px, 3.4vw, 19px);
+  line-height: 1.65;
+}
+
+main .section .knowledgeHeading {
+  white-space: normal;
+  font-size: clamp(21px, 5.3vw, 31px);
+}
+
+main .purificationCopy h3,
+main .section .purificationCopy h2,
+main .purificationCopy em {
+  color: #d8666d;
+}
+
+main .soul {
+  background: #fff;
+}
+
+main .patternMap {
+  display: grid;
+  width: 88%;
+  margin: 8px auto 36px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+main .patternMap span {
+  position: relative;
+  padding: 15px 8px;
+  border-radius: 4px;
+  background: #eaebe7;
+  font-family: sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+main .patternMap strong {
+  grid-column: 1 / -1;
+  padding: 22px 12px;
+  background: #ef8586;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.75;
+  text-align: center;
+  order: 3;
+}
+
+main .patternMap span:nth-child(1),
+main .patternMap span:nth-child(2) {
+  order: 1;
+}
+
+main .patternMap span:nth-child(4),
+main .patternMap span:nth-child(5) {
+  order: 4;
+}
+
+main .woundList {
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main .woundList li {
+  border-left: 0;
+  border-radius: 4px;
+  background: #f7f7f5;
+  box-shadow: none;
+}
+
+main .woundList li::before {
+  background: #93959b;
+}
+
+main .repetitionCallout {
+  width: 88%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #9a9b9f;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: none;
+}
+
+main .section .repetitionCallout h2 {
+  color: #df7075;
+}
+
+main .experience {
+  background: #9b9da4;
+  color: #fff;
+}
+
+main .experience > h2,
+main .experience > p,
+main .experience h3 {
+  color: #fff;
+  border-color: #dfe0e2;
+}
+
+main .bigNumber {
+  color: #fff2d0;
+  font-style: normal;
+  font-weight: 600;
+}
+
+main .voices p {
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #606060;
+}
+
+main .offer {
+  background: #fed1d1;
+}
+
+main .offerHero {
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 6px 16px #986b6b20;
+}
+
+main .offerHero h2 em {
+  color: #df7075;
+}
+
+main .consultationVisual {
+  padding: 72px 0 0;
+  background: #fff;
+}
+
+main .consultationVisualPhoto {
+  width: min(calc(100% - 48px), 580px);
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+main .consultationVisualCopy {
+  border-color: #d9d9d7;
+  border-radius: 0 0 3px 3px;
+  background: #f8f9f4;
+  box-shadow: none;
+}
+
+main .consultationVisualCopy h2 {
+  color: #df7075;
+}
+
+main .consultation {
+  background: #fff;
+}
+
+main .consultationList article {
+  margin-bottom: 13px;
+  padding: 20px 14px;
+  border: 0;
+  border-radius: 4px;
+  background: #f8f9f4;
+}
+
+main .consultationList article > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-basis: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #7e8085;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+}
+
+main .specialNote {
+  background: #fdeeee;
+}
+
+main .secondProof {
+  background: #fdeeee;
+}
+
+main .undecided {
+  background: #fff;
+}
+
+main .checkList p {
+  border-radius: 4px;
+  background: #f3f3f0;
+  box-shadow: none;
+}
+
+main .faq {
+  background: #f8f9f4;
+}
+
+main .faq details {
+  border: 1px solid #e0dfdc;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+main .faq summary span,
+main .answer > span {
+  color: #df7075;
+}
+
+main .finale {
+  background: #fff;
+}
+
+main .finalQuote {
+  border-color: #999a9e;
+}
+
+main .finalQuote h2 {
+  color: #df7075;
+}
+
+main .ctaWrap .urgencyBar {
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: none;
+}
+
+main .ctaWrap .urgencyBar > span,
+main .ctaWrap .urgencyBar > span:first-child,
+main .ctaWrap .urgencyBar > span:last-child {
+  background: #fff;
+  color: #cc6268;
+}
+
+main .urgencyBar > i {
+  background: #e3a7aa;
+}
+
+main .urgencyBar small {
+  color: #747474;
+}
+
+main .ctaWrap .cta {
+  border: 5px solid #fff;
+  border-radius: 999px;
+  background: #ec7b7c;
+  color: #fff;
+  box-shadow: 0 5px 0 #a3a4a8, 0 10px 18px #5c5d6126;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(17px, 4.8vw, 23px);
+  animation: none;
+}
+
+main .ctaWrap .cta:hover {
+  background: #e66e70;
+}
+
+main .ctaWrap .formNote {
+  color: #7c7477;
+}
+
+main footer {
+  background: #85878d;
+}
+
+@media (max-width: 420px) {
+  main .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  main .hero .eyebrow {
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 11px;
+  }
+
+  main .sectionHeading h2,
+  main .cause > h2,
+  main .experience > h2,
+  main .offer > h2 {
+    padding-right: 4px;
+    padding-left: 4px;
+    font-size: 24px;
+  }
+
+  main .patternMap,
+  main .woundList,
+  main .repetitionCallout,
+  main .fearVisual,
+  main .purificationVisual,
+  main .undecidedVisual,
+  main .finalHappyPhoto {
+    width: 92%;
+  }
+
+  main .patternMap strong {
+    font-size: 18px;
+  }
+
+  main .ctaWrap .cta {
+    padding: 18px 10px;
+  }
+}
