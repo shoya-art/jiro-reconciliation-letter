@@ -26,24 +26,24 @@ const painCards = [
 ];
 
 const resultVoices = [
-  ["/images/results/voice-01.jpg", 1047, 845],
-  ["/images/results/voice-02.jpg", 1052, 844],
-  ["/images/results/voice-03.jpg", 1070, 520],
-  ["/images/results/voice-04.jpg", 1066, 793],
-  ["/images/results/voice-05.jpg", 1007, 759],
-  ["/images/results/voice-06.jpg", 1043, 824],
-  ["/images/results/voice-07.jpg", 1046, 1249],
-  ["/images/results/voice-08.jpg", 1034, 856],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B01.jpg", 1047, 845],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B02.jpg", 1052, 844],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B03.jpg", 1070, 520],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B04.jpg", 1066, 793],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B05.jpg", 1007, 759],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B06.jpg", 1043, 824],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B07.jpg", 1046, 1249],
+  ["https://raw.githubusercontent.com/shoya-art/jiro-reconciliation-letter/main/pic/%E5%AE%9F%E7%B8%BE%E8%80%85%E3%81%AE%E5%A3%B08.jpg", 1034, 856],
 ] as const;
 
 const applicationUrl = "https://liff.line.me/2000155954-8QV6Ql2R?unique_key=UpH6ui&ts=1787586839";
 
 function ResultGallery({ from, to }: { from: number; to: number }) {
-  return <div className="resultGallery">{resultVoices.slice(from - 1, to).map(([src,width,height],index)=><figure className="resultVoice" key={src}><img src={src} alt={`復縁実績者の声 ${from + index}`} width={width} height={height} loading="lazy" /></figure>)}</div>;
+  return <div className="resultGallery">{resultVoices.slice(from - 1, to).map(([src,width,height],index)=><figure className="resultVoice" key={src}><img src={src} alt={`復縁実績者の声 ${from + index}`} width={width} height={height} loading="eager" /></figure>)}</div>;
 }
 
-function CTA({ label = "無料個別相談で、復縁への一歩を進める" }: { label?: string }) {
-  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href={applicationUrl}>{label}<small>1時間程度・日程は個別に調整します</small></a></div>;
+function CTA() {
+  return <div className="ctaWrap"><div className="urgencyBar"><span><small>今回ご案内できるのは</small><b>限定 <em>15</em>名</b></span><i/><span><small>お申し込みの受付は</small><b>募集開始から <em>3</em>日間</b></span></div><a className="cta" href={applicationUrl}><span className="ctaLabel">ジローに個別相談してみる</span><small>1時間程度・日程は個別に調整します</small></a></div>;
 }
 
 export default function Home() {
@@ -66,19 +66,19 @@ export default function Home() {
 
     <section className="section soul"><div className="sectionHeading"><h2>彼との間で起きたことは、<br />今回の別れだけが原因じゃない</h2></div><div className="patternFlow"><article><small>01</small><h3>過去の経験</h3><div className="experienceChips"><span>浮気された</span><span>突然フラれた</span><span>誰かと比べられた</span><span>大切な人が離れた</span></div></article><i>↓</i><article><small>02</small><h3>「また愛されなくなるかも」</h3><p>気づかないうちに、彼を失う怖さが強くなる</p></article><i>↓</i><article className="patternResult"><small>03</small><h3>今の恋愛で起きること</h3><p><b>不安になる</b><b>我慢する</b><b>最後にぶつける</b></p></article></div><p>こうした過去の経験が、<br />「また愛されなくなるかもしれない」という不安につながる。<br /><br />返信が遅いだけで不安になったり、<br />他の女性が気になったり、<br /><br />我慢した気持ちを<br />最後にぶつけてしまったり。</p><div className="repetitionCallout"><p>同じことを繰り返してしまうのは、</p><h2>あなたに魅力がない<br />からではありません。</h2><strong>過去の恋愛で身についた考え方や反応が、<br />今も残っているからなんです。</strong></div></section>
 
-    <section className="section experience"><h2>別れの原因も、繰り返す恋愛パターンも<br />一人ずつ違いました</h2><div className="bigNumber">6,000<small>件以上</small></div><p>本当に一人として、同じ恋愛はしていませんでした。</p><div className="voices"><p>「返信が来なくて不安になり、何通もLINEしてしまった」</p><p>「元カノと自分を比べて、好きと言われても信じられなかった」</p><p>「嫌われたくなくて我慢して、最後に全部ぶつけてしまった」</p></div><p>全員に同じ方法を当てはめても、<br />その人に必要な内面改善までは分かりません。</p><h3>まず知るべきなのは、<br />あなたと彼の間で何が起きて、<br />どんな考え方や行動を変える必要があるのか。</h3></section>
+    <section className="section experience"><h2 className="controlledHeading"><span>別れの原因も、</span><span>繰り返す恋愛パターンも</span><span>一人ずつ違いました</span></h2><div className="bigNumber">6,000<small>件以上</small></div><p>本当に一人として、同じ恋愛はしていませんでした。</p><div className="voices"><p>「返信が来なくて不安になり、何通もLINEしてしまった」</p><p>「元カノと自分を比べて、好きと言われても信じられなかった」</p><p>「嫌われたくなくて我慢して、最後に全部ぶつけてしまった」</p></div><p>全員に同じ方法を当てはめても、<br />その人に必要な内面改善までは分かりません。</p><h3>まず知るべきなのは、<br />あなたと彼の間で何が起きて、<br />どんな考え方や行動を変える必要があるのか。</h3></section>
 
-    <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたのためへ</p><h2>今回だけ、<br />無料で個別相談を開催します。</h2><p>「私は、何を変えたらいいの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><h2 className="offerMessage">あなたと彼の状況を僕が直接聞いて<br />今の二人に必要な内面改善と行動を<br />一緒に整理します。</h2></div><CTA label="ジローと一緒に、復縁への一歩を進める"/></section>
+    <section className="section offer" id="apply"><p className="chapter">ここまで読んでくれたあなたのためへ</p><h2>今回だけ、<br />無料で個別相談を開催します。</h2><p>「私は、何を変えたらいいの？」<br />「私と彼の場合は、何をしたらいいの？」</p><div className="offerHero"><h2 className="offerMessage controlledHeading"><span>あなたと彼の状況を僕が直接聞いて</span><span>今の二人に必要な</span><span>内面改善と行動を</span><span>一緒に整理します。</span></h2></div><CTA/></section>
 
-    <section className="section consultation"><div className="sectionHeading"><h2>個別相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p>「私と彼の場合はどうなの？」を<br />そのまま僕に聞ける特別な相談企画です。</p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
+    <section className="section consultation"><div className="sectionHeading"><h2>個別相談で一緒に整理すること</h2></div><div className="consultationList">{consultationItems.map(([n,t,d])=><article key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="specialNote"><p className="controlledHeading"><span>「私と彼の場合はどうなの？」を</span><span>そのまま僕に聞ける</span><span>特別な相談企画です。</span></p><strong>今まで一人で調べて、考えて、迷ってきたことを<br />この機会に全部持ってきてください。</strong></div><CTA/></section>
 
-    <section className="section proof secondProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">一人で悩み続けることをやめて、<br />自分の恋愛と向き合った方々の記録です。</p><ResultGallery from={5} to={8}/><CTA label="ジローに個別相談してみる"/></section>
+    <section className="section proof secondProof"><div className="sectionHeading"><h2>ジローと一緒に<br />幸せを掴んだ人たち</h2></div><p className="proofIntro">一人で悩み続けることをやめて、<br />自分の恋愛と向き合った方々の記録です。</p><ResultGallery from={5} to={8}/><CTA/></section>
 
     <section className="section undecided"><p className="chapter">迷ったままでも大丈夫です</p><div className="undecidedVisual"><Image src="/images/undecided-reflection-v2.png" alt="彼への気持ちをまだ決め切れず、穏やかに自分の心と向き合う女性" fill sizes="(max-width:720px) 100vw,720px"/><div className="undecidedShade"/><h2>100%「彼と戻りたい」と<br />思っていなくても大丈夫です。</h2></div><div className="checkList"><p>彼のことはまだ好きだけど、戻るのが正解か分からない</p><p>復縁できたら嬉しい。でも、また同じことを繰り返すのは嫌</p><p>もう少し頑張りたいけれど、諦めた方がいいのかとも思う</p><p>自分でも、彼への気持ちをうまく整理できない</p></div><p><strong>こんな状態のまま参加して大丈夫です。</strong><br /><br />「私は本当に彼と戻りたいの？」<br />そこから一緒に整理するための個別相談でもあります。</p></section>
 
     <section className="section faq"><div className="sectionHeading"><h2>個別相談についてのQ&A</h2></div>{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>Q</span>{q}</summary><div className="answer"><span>A</span><p>{a}</p></div></details>)}</section>
 
-    <section className="section finale"><p>彼ともう一度やり直したいなら、<br />そのために今できることを一緒に見つければいい。</p><p>まだ自分の気持ちが分からないなら、<br />無理に答えを決めなくても大丈夫です。</p><div className="finalQuote"><span>いつか、また彼の隣で笑いながら</span><h2>「あの時、諦めなくてよかった」</h2><p>そう思える未来を、<br />一緒に目指していきましょう。</p></div><div className="finalHappyPhoto"><Image src="/images/final-real-couple-v2.png" alt="同棲や結婚後の日常の中で自然に寄り添い笑うカップル" fill sizes="(max-width:720px) 100vw,720px"/></div><CTA label="ジローに個別相談してみる"/><p className="signature">復縁アドバイザー　ジロー</p></section>
+    <section className="section finale"><p>彼ともう一度やり直したいなら、<br />そのために今できることを一緒に見つければいい。</p><p>まだ自分の気持ちが分からないなら、<br />無理に答えを決めなくても大丈夫です。</p><div className="finalQuote"><span>いつか、また彼の隣で笑いながら</span><h2>「あの時、諦めなくてよかった」</h2><p>そう思える未来を、<br />一緒に目指していきましょう。</p></div><div className="finalHappyPhoto"><Image src="/images/final-real-couple-v2.png" alt="同棲や結婚後の日常の中で自然に寄り添い笑うカップル" fill sizes="(max-width:720px) 100vw,720px"/></div><CTA/><p className="signature">復縁アドバイザー　ジロー</p></section>
 
   </main>;
 }

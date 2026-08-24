@@ -2926,6 +2926,11 @@ main .offerHero .offerMessage {
   line-height: 1.85;
   font-weight: 500;
 }
+main .controlledHeading > span {
+  display: block;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
 main .consultationVisualCopy h2 {
   font-size: clamp(22px, 4.1vw, 29px);
 }
@@ -2943,6 +2948,10 @@ main .ctaWrap .cta::after {
   font-family: sans-serif;
   font-size: 34px;
   transform: translateY(-55%);
+}
+main .ctaLabel {
+  display: block;
+  white-space: nowrap;
 }
 main .undecided {
   background: var(--mist-pink);
@@ -2967,6 +2976,41 @@ main .finalQuote h2 {
   main .experience > h2,
   main .offer > h2 {
     font-size: 22px;
+  }
+  main .sectionHeading h2,
+  main .cause > h2,
+  main .offer > h2,
+  main .knowledgeHeading,
+  main .answerCallout h2,
+  main .desireCallout h2,
+  main .repetitionCallout h2,
+  main .finalQuote h2 {
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  main .experience > h2.controlledHeading {
+    font-size: 21px;
+    line-height: 1.72;
+  }
+  main .offerHero {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  main .offerHero .offerMessage {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+  main .specialNote p.controlledHeading {
+    font-size: 18px;
+    line-height: 1.85;
+  }
+  main .ctaWrap .cta {
+    padding-right: 39px;
+    padding-left: 12px;
+    font-size: 20px;
+  }
+  main .ctaWrap .cta::after {
+    right: 15px;
   }
   main .section.empathy .painList {
     width: 84%;
